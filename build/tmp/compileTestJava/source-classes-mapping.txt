@@ -1,2 +1,4 @@
 com/bridgelabz/datastructuretest/MyHashMapTest.java
  com.bridgelabz.datastructuretest.MyHashMapTest
+com/bridgelabz/datastructuretest/MyLinkedHashMapTest.java
+ com.bridgelabz.datastructuretest.MyLinkedHashMapTest

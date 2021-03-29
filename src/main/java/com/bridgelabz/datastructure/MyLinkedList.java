@@ -56,15 +56,15 @@ public class MyLinkedList<K> {
         return tempNode;
     }
 
-    public INode search(K key) {
+    public K search(K key) {
         INode tempNode = this.head;
         while (tempNode != null) {
             if (tempNode.getKey().equals(key)) {
-                return tempNode;
+                return key;
             }
             tempNode = tempNode.getNext();
         }
-        return tempNode;
+        return key;
     }
 
     public boolean serchAndInsertElement(K key, INode insertNode) {
@@ -90,14 +90,16 @@ public class MyLinkedList<K> {
     }
 
     public void searchAndDelete(K key) {
-        INode findNode = search(key);
-        if (findNode != null) {
-            System.out.println("Linked List size before deleting element : " + size());
-            INode nextNode = findNode.getNext();
-            INode tempNode = nextNode.getNext();
-            if (nextNode != tail) {
-                findNode.setNext(tempNode);
-                System.out.println("Linked List size after deleting element : " + size());
+        INode tempNode = this.head;
+        System.out.println("Linked List size before deleting element : " + size());
+        while (tempNode != null) {
+            if (tempNode.getKey().equals(key)) {
+                INode nextNode = tempNode.getNext();
+                INode newNode = nextNode.getNext();
+                if (nextNode != tail) {
+                    tempNode.setNext(newNode);
+                    System.out.println("Linked List size after deleting element : " + size());
+                }
             }
         }
     }

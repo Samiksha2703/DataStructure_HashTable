@@ -8,3 +8,5 @@ com/bridgelabz/datastructure/MyMapNode.java
  com.bridgelabz.datastructure.MyMapNode
 com/bridgelabz/datastructure/INode.java
  com.bridgelabz.datastructure.INode
+com/bridgelabz/datastructure/MyLinkedHashMap.java
+ com.bridgelabz.datastructure.MyLinkedHashMap
